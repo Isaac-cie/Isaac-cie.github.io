@@ -81,12 +81,12 @@
 
 <meta name="description" content="我的第二篇博客, 写几个建博客期间碰到的问题~">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第二篇博客">
+<meta property="og:title" content="博客主题配置中遇到的问题">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;02&#x2F;my-second-blog&#x2F;index.html">
 <meta property="og:site_name" content="等天晴的博客">
 <meta property="og:description" content="我的第二篇博客, 写几个建博客期间碰到的问题~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-04T15:25:29.587Z">
+<meta property="og:updated_time" content="2019-12-05T03:59:21.678Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <title>我的第二篇博客 | 等天晴的博客</title>
+  <title>博客主题配置中遇到的问题 | 等天晴的博客</title>
   
 
 
@@ -257,7 +257,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我的第二篇博客</h1>
+          <h1 class="post-title" itemprop="name headline">博客主题配置中遇到的问题</h1>
         
 
         <div class="post-meta">
@@ -312,6 +312,11 @@
           
 
           
+          
+          
+			<span class="post-meta-divider">|</span>
+			<span id="busuanzi_value_page_pv"></span>次阅读
+		  
 
           
 
@@ -338,6 +343,11 @@
 <p>3.menu分类处原来的文件在/   /后有一个空格再加||，跟教程不匹配<br>如：categories: /categories/ || th</p>
 <p>4.加载过于慢，网上说是字体的问题，但用本地字体未解决，原因未知…</p>
 <p>5.加入背景图片后一些文字不能正常显示，重新配置后发现..</p>
+<p>6.加载过慢，在网上找到了解决方案。<br>把在NexT主题的_config.yml里面的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># Uri of fonts host. E.g. //fonts.googleapis.com (Default)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">host:</span></pre></td></tr></table></figure>
+<p>改为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># Uri of fonts host. E.g. //fonts.googleapis.com (Default)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># fonts.lug.ustc.edu.cn是中科大的源</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">host: //fonts.lug.ustc.edu.cn</span></pre></td></tr></table></figure>
+<p>(转自<a href="https://anson2416.github.io/posts/ae382d5a/" target="_blank" rel="noopener">https://anson2416.github.io/posts/ae382d5a/</a>)</p>
 <p>……</p>
 
       
@@ -480,6 +490,13 @@
           
 
           
+          
+          <!-- 音乐播放器 -->
+          <div>
+			
+			  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=210 height="110" src="//music.163.com/outchain/player?type=0&id=3089280442&auto=1&height=66"></iframe>"></iframe>
+			
+		  </div>
 
           
           
@@ -526,6 +543,17 @@
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
 
 
 
