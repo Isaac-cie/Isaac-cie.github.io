@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="C语言,算法,知乎," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="转自知乎（程序员龙王）https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;93469185">
+<meta name="keywords" content="C语言,算法,知乎">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言经典算法程序">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;05&#x2F;c&#x2F;index.html">
+<meta property="og:site_name" content="等天晴的博客">
+<meta property="og:description" content="转自知乎（程序员龙王）https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;93469185">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-05T09:48:20.365Z">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/05/c/"/>
+
+
+
+
+
+  <title>C语言经典算法程序 | 等天晴的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">等天晴的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Welcome to my blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/05/c/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Isaac-cie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="等天晴的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C语言经典算法程序</h1>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-05T17:41:22+08:00">
+                2019-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+          
+          
+			<span class="post-meta-divider">|</span>
+			<span id="busuanzi_value_page_pv"></span>次阅读
+		  
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>转自知乎（程序员龙王）</strong><br><a href="https://zhuanlan.zhihu.com/p/93469185" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/93469185</a></p>
+<a id="more"></a>
+
+<p>C语言的学习要从基础开始，这里是N个经典的算法－１C语言的学习要从基础开始，这里是N个经典的算法 ，快来练习吧！</p>
+<p>题目：古典问题：有一对兔子，从出生后第3个月起每个月都生一对兔子，小兔</p>
+<p>子长到第三个月后每个月又生一对兔子，假如兔子都不死，问每个月的兔子总数</p>
+<p>为多少？</p>
+<hr>
+<p>程序分析：兔子的规律为数列1,1,2,3,5,8,13,21….</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>long f1,f2;<br>int i;<br>f1=f2=1;<br>for(i=1;i&lt;=20;i++)<br>　{ printf(“%12ld %12ld”,f1,f2);<br>　　　if(i%2==0) printf(“\n”);/<em>控制输出，每行四个</em>/<br>　　　f1=f1+f2;/<em>前两个月加起来赋值给第三个月</em>/<br>　　　f2=f1+f2;/<em>前两个月加起来赋值给第三个月</em>/<br>　}<br>}<br>上题还可用一维数组处理，you try!</p>
+<p>题目：判断101-200之间有多少个素数，并输出所有素数。</p>
+<hr>
+<p>程序分析：判断素数的方法：用一个数分别去除2到sqrt(这个数)，如果能被整</p>
+<p>除，则表明此数不是素数，反之是素数。</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “math.h”<br>main()<br>{<br>　int m,i,k,h=0,leap=1;<br>　printf(“\n”);<br>　for(m=101;m&lt;=200;m++)<br>　　{ k=sqrt(m+1);<br>　　　for(i=2;i&lt;=k;i++)<br>　　　　　if(m%i==0)<br>　　　　　　{leap=0;break;}<br>　　　if(leap) {printf(“%-4d”,m);h++;<br>　　　　　　　　if(h%10==0)<br>　　　　　　　　printf(“\n”);<br>　　　　　　　 }<br>　　　leap=1;<br>　　}<br>　printf(“\nThe total is %d”,h);<br>}<br>题目：打印出所有的“水仙花数”，所谓“水仙花数”是指一个三位数，其各位</p>
+<p>数字立方和等于该数本身。例如：153是一个“水仙花数”，因为153=1的三次方</p>
+<p>＋5的三次方＋3的三次方。</p>
+<hr>
+<p>程序分析：利用for循环控制100-999个数，每个数分解出个位，十位，百位。</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>int i,j,k,n;<br>printf(“‘water flower’number is:”);<br>　for(n=100;n&lt;1000;n++)<br>　{<br>　　i=n/100;/<em>分解出百位</em>/<br>　　j=n/10%10;/<em>分解出十位</em>/<br>　　k=n%10;/<em>分解出个位</em>/<br>　　if(i<em>100+j</em>10+k==i<em>i</em>i+j<em>j</em>j+k<em>k</em>k)<br>　　　{<br>　　　printf(“%-5d”,n);<br>　　　}<br>　}<br>printf(“\n”);<br>} </p>
+<p>题目：将一个正整数分解质因数。例如：输入90,打印出90=2<em>3</em>3*5。</p>
+<hr>
+<p>程序分析：对n进行分解质因数，应先找到一个最小的质数k，然后按下述步骤完</p>
+<p>成：<br>(1)如果这个质数恰等于n，则说明分解质因数的过程已经结束，打印出即可。<br>(2)如果n&lt;&gt;k，但n能被k整除，则应打印出k的值，并用n除以k的商,作为新的正</p>
+<p>整数你n,重复执行第一步。<br>(3)如果n不能被k整除，则用k+1作为k的值,重复执行第一步。</p>
+<hr>
+<p>程序源代码：</p>
+<p>/* zheng int is divided yinshu<em>/<br>main()<br>{<br>int n,i;<br>printf(“\nplease input a number:\n”);<br>scanf(“%d”,&amp;n);<br>printf(“%d=”,n);<br>for(i=2;i&lt;=n;i++)<br>　{<br>　　while(n!=i)<br>　　{<br>　　　if(n%i==0)<br>　　　{ printf(“%d</em>“,i);<br>　　　　n=n/i;<br>　　　}<br>　　　else<br>　　　　break;<br>　　}<br>}<br>printf(“%d”,n);<br>}<br>题目：利用条件运算符的嵌套来完成此题：学习成绩&gt;=90分的同学用A表示，60</p>
+<p>-89分之间的用B表示，60分以下的用C表示。</p>
+<hr>
+<p>程序分析：(a&gt;b)?a:b这是条件运算符的基本例子。</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>　int score;<br>　char grade;<br>　printf(“please input a score\n”);<br>　scanf(“%d”,&amp;score);<br>　grade=score&gt;=90?’A’score&gt;=60?’B’:’C’);<br>　printf(“%d belongs to %c”,score,grade);<br>} </p>
+<p>题目：输入两个正整数m和n，求其最大公约数和最小公倍数。</p>
+<hr>
+<p>程序分析：利用辗除法。</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>　int a,b,num1,num2,temp;<br>　printf(“please input two numbers:\n”);<br>　scanf(“%d,%d”,&amp;num1,&amp;num2);<br>　if(num1 　{ temp=num1;<br>　　num1=num2;　<br>　　num2=temp;<br>　}<br>a=num1;b=num2;<br>while(b!=0)/<em>利用辗除法，直到b为0为止</em>/<br>　{<br>　　temp=a%b;<br>　　a=b;<br>　　b=temp;<br>　}<br>printf(“gongyueshu:%d\n”,a);<br>printf(“gongbeishu:%d\n”,num1*num2/a);<br>}<br>题目：输入一行字符，分别统计出其中英文字母、空格、数字和其它字符的个数</p>
+<p>。</p>
+<hr>
+<p>程序分析：利用while语句,条件为输入的字符不为’\n’.</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>main()<br>{char c;<br>　int letters=0,space=0,digit=0,others=0;<br>　printf(“please input some characters\n”);<br>　while((c=getchar())!=’\n’)<br>　{<br>　if(c&gt;=’a’&amp;&amp;c&lt;=’z’||c&gt;=’A’&amp;&amp;c&lt;=’Z’)<br>　　letters++;<br>　else if(c==’ ‘)<br>　　space++;<br>　　　else if(c&gt;=’0’&amp;&amp;c&lt;=’9’)<br>　　　　　　　digit++;<br>　　　　　else<br>　　　　　　　others++;<br>}<br>printf(“all in all:char=%d space=%d digit=%d others=%<br>d\n”,letters,space,digit,others);<br>}<br>题目：求s=a+aa+aaa+aaaa+aa…a的值，其中a是一个数字。例如</p>
+<p>2+22+222+2222+22222(此时共有5个数相加)，几个数相加有键盘控制。</p>
+<hr>
+<p>程序分析：关键是计算出每一项的值。</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>　int a,n,count=1;<br>　long int sn=0,tn=0;<br>　printf(“please input a and n\n”);<br>　scanf(“%d,%d”,&amp;a,&amp;n);<br>　printf(“a=%d,n=%d\n”,a,n);<br>　while(count&lt;=n)<br>　{<br>　　tn=tn+a;<br>　　sn=sn+tn;<br>　　a=a*10;<br>　　++count;<br>　}<br>printf(“a+aa+…=%ld\n”,sn);<br>}<br>题目：一个数如果恰好等于它的因子之和，这个数就称为“完数”。例如6=1＋2</p>
+<p>＋3.编程找出1000以内的所有完数。</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>static int k[10];<br>int i,j,n,s;<br>for(j=2;j&lt;1000;j++)<br>　{<br>　n=-1;<br>　s=j;<br>　　for(i=1;i 　　{<br>　　　if((j%i)==0)<br>　　　{　n++;<br>　　　　s=s-i;<br>　　　　k[n]=i;<br>　　　}<br>　　}<br>　if(s==0)<br>　{<br>　printf(“%d is a wanshu”,j);<br>　for(i=0;i 　printf(“%d,”,k);<br>　printf(“%d\n”,k[n]);<br>　}<br>}<br>} </p>
+<p>题目：一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，</p>
+<p>求它在第10次落地时，共经过多少米？第10次反弹多高？</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>float sn=100.0,hn=sn/2;<br>int n;<br>for(n=2;n&lt;=10;n++)<br>　{<br>　　sn=sn+2<em>hn;/*第n次落地时共经过的米数</em>/<br>　　hn=hn/2; /<em>第n次反跳高度</em>/<br>　}<br>printf(“the total of road is %f\n”,sn);<br>printf(“the tenth is %f meter\n”,hn);<br>}<br>题目：一只猴子摘了N个桃子第一天吃了一半又多吃了一个,第二天又吃了余下的</p>
+<p>一半又多吃了一个,到第十天的时候发现还有一个.</p>
+<hr>
+<p>程序源代码：</p>
+<p>/* 猴子吃桃问题 */</p>
+<p>main()<br>{<br>int i,s,n=1;<br>for(i=1;i&lt;10;i++)<br>{<br>s=(n+1)*2<br>n=s;<br>}<br>printf(“第一天共摘了%d个桃\n”,s);<br>} </p>
+<p>迭代法求方程根</p>
+<hr>
+<p>/* 迭代法求一个数的平方根 */</p>
+<p>#define Epsilon 1.0E-6 /<em>控制解的精度</em>/<br>#include&lt;math.h&gt;<br>main()<br>{<br>float a,x0,x1;<br>printf(“请输入要求的数:”);<br>scanf(“%f”,&amp;a);<br>x0=a/2;<br>x1=(x0+a/x0)/2;<br>while(fabs(x1-x0)&gt;=Epsilon)<br>　　{<br>　　x0=x1;<br>　　x1=(x0+a/x0)/2;<br>　　}<br>printf(“%f的平方根：%f.5\n”,x1);<br>} </p>
+<p>/* 上题的另一种算法 */</p>
+<p>#define Epsilon 1.0E-6 /<em>控制解的精度</em>/<br>#include &lt;stdio.h&gt;<br>#include &lt;math.h&gt;<br>main()<br>{<br>float num,pre,this;<br>do<br>　　{<br>　　scanf(“%f”,&amp;num);/<em>输入要求平方根的数</em>/<br>　　}while(num&lt;0);<br>if (num==0)<br>　　printf(“the root is 0”);<br>else<br>　　{<br>　　 this=1;<br>　　 do<br>　　 {<br>　　　　pre=this;<br>　　　　this=(pre+num/pre)/2;<br>　　　　}while(fabs(pre-this)&gt;Epsilon);/<em>用解的精度，控制循环次数</em>/<br>　　 }<br>printf(“the root is %f”,this);<br>}<br>用牛顿迭代法 求方程 2<em>x</em>x<em>x-4</em>x<em>x+3</em>x-6 的根</p>
+<p>/* 牛顿迭代法 <em>/<br>#define Epsilon 1.0E-6 /*控制解的精度</em>/<br>#include&lt;math.h&gt;<br>main()<br>{<br>　　 float x1,x0=1.5;<br>　　 x1=x0-(2<em>x0<em>x0</em>x0-4<em>x0</em>x0+3<em>x0-6)/(6</em>x0<em>x0-8</em>x0+3);<br>　　 while(fabs(x1-x0&gt;=Epsilon)<br>　　 {　　<br>　　　　　　x0=x1;<br>　　　　　　x1=x0-(2<em>x0</em>x0<em>x0-4</em>x0<em>x0+3</em>x0-6)/(6<em>x0</em>x0-8*x0+3);<br>　　 }<br>　　 printf(“方程的根为%f\n”,x1);<br>}<br>用二分法求上题 /</em> 二分法 */</p>
+<p>#define Epsilon 1.0E-5 /<em>控制解的精度</em>/<br>#include&lt;math.h&gt;<br>main()<br>{<br>　　 folat x1,x2,x0,f1,f2,f0;<br>　　 x0=(x1+x2)/2;<br>　　 f0=2<em>x0<em>x0</em>x0-4<em>x0</em>x0+3*x0-6;　　 /</em> 求中点的函数值 <em>/<br>　　 while(fabs(f0)&gt;=Epsilon)<br>　　 {<br>　　　　 if(f0</em>f1&lt;0)<br>　　　　 { x2=x0;<br>f2=2<em>x2</em>x2<em>x2-4</em>x2<em>x2+3</em>x2-6;<br>　　　　 }<br>　　　　 if(f0<em>f2&lt;0)<br>　　　　 { x1=x0;<br>f1=2</em>x1<em>x1</em>x1-4<em>x1</em>x1+3<em>x1-6;<br>　　　　 }<br>　　　　 x0=(x1+x2)/2;<br>　　　　 f0=2</em>x0<em>x0</em>x0-4<em>x0</em>x0+3*x0-6;<br>　　 }<br>　　 printf(“用二分法求得方程的根：%f\n”,x0);<br>}<br>题目：打印出如下图案（菱形）</p>
+<p>*</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>*</p>
+<hr>
+<p>程序分析：先把图形分成两部分来看待，前四行一个规律，后三行一个规律，利</p>
+<p>用双重for循环，第一层控制行，第二层控制列。</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>int i,j,k;<br>for(i=0;i&lt;=3;i++)<br>　{<br>　for(j=0;j&lt;=2-i;j++)<br>　　printf(“ “);<br>　for(k=0;k&lt;=2<em>i;k++)<br>　　printf(“</em>“);<br>　printf(“\n”);<br>　}<br>for(i=0;i&lt;=2;i++)<br>　{<br>　for(j=0;j&lt;=i;j++)<br>　　printf(“ “);<br>　for(k=0;k&lt;=4-2<em>i;k++)<br>　　printf(“</em>“);<br>　printf(“\n”);<br>　}<br>}<br>题目：一个5位数，判断它是不是回文数。即12321是回文数，个位与万位相同，</p>
+<p>十位与千位相同。</p>
+<hr>
+<p>程序分析：同29例</p>
+<hr>
+<p>程序源代码：</p>
+<p>main( )<br>{<br>long ge,shi,qian,wan,x;<br>scanf(“%ld”,&amp;x);<br>wan=x/10000;<br>qian=x%10000/1000;<br>shi=x%100/10;<br>ge=x%10;<br>if (ge==wan&amp;&amp;shi==qian)/<em>个位等于万位并且十位等于千位</em>/<br>　printf(“this number is a huiwen\n”);<br>else<br>　printf(“this number is not a huiwen\n”);<br>} </p>
+<p>题目：请输入星期几的第一个字母来判断一下是星期几，如果第一个字母一样，</p>
+<p>则继续判断第二个字母。</p>
+<hr>
+<p>程序分析：用情况语句比较好，如果第一个字母一样，则判断用情况语句或if语</p>
+<p>句判断第二个字母。</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include &lt;stdio.h&gt;<br>void main()<br>{<br>char letter;<br>printf(“please input the first letter of someday\n”);<br>while ((letter=getch())!=’Y’) /<em>当所按字母为Y时才结束</em>/<br>{ switch (letter)<br>{case ‘S’:printf(“please input second letter\n”);<br>　　　　　if((letter=getch())==’a’)<br>　　　　　　printf(“saturday\n”);<br>　　　　　else if ((letter=getch())==’u’)<br>　　　　　　　　　printf(“sunday\n”);<br>　　　　　　　else printf(“data error\n”);<br>　　　　　break;<br>case ‘F’:printf(“friday\n”);break;<br>case ‘M’:printf(“monday\n”);break;<br>case ‘T’:printf(“please input second letter\n”);<br>　　　　　if((letter=getch())==’u’)<br>　　　　　　printf(“tuesday\n”);<br>　　　　　else if ((letter=getch())==’h’)<br>　　　　　　　　　printf(“thursday\n”);<br>　　　　　　　else printf(“data error\n”);<br>　　　　　break;<br>case ‘W’:printf(“wednesday\n”);break;<br>default: printf(“data error\n”);<br>　　}<br>　}<br>}<br>题目：Press any key to change color, do you want to try it. Please</p>
+<p>hurry up!</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include &lt;conio.h&gt;<br>void main(void)<br>{<br>int color;<br>for (color = 0; color &lt; 8; color++)<br>　{<br>　textbackground(color); /<em>设置文本的背景颜色</em>/<br>　cprintf(“This is color %d\r\n”, color);<br>　cprintf(“ress any key to continue\r\n”);<br>　getch(); /<em>输入字符看不见</em>/<br>　}<br>}<br>题目：学习gotoxy()与clrscr()函数</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include &lt;conio.h&gt;<br>void main(void)<br>{<br>clrscr(); /<em>清屏函数</em>/<br>textbackground(2);<br>gotoxy(1, 5); /<em>定位函数</em>/<br>cprintf(“Output at row 5 column 1\n”);<br>textbackground(3);<br>gotoxy(20, 10);<br>cprintf(“Output at row 10 column 20\n”);<br>} </p>
+<p>题目：练习函数调用</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include &lt;stdio.h&gt;<br>void hello_world(void)<br>{<br>printf(“Hello, world!\n”);<br>}<br>void three_hellos(void)<br>{<br>int counter;<br>for (counter = 1; counter &lt;= 3; counter++)<br>hello_world();/<em>调用此函数</em>/<br>}<br>void main(void)<br>{<br>three_hellos();/<em>调用此函数</em>/<br>} </p>
+<p>题目：文本颜色设置</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include &lt;conio.h&gt;<br>void main(void)<br>{<br>int color;<br>for (color = 1; color &lt; 16; color++)<br>　{<br>　textcolor(color);/<em>设置文本颜色</em>/<br>　cprintf(“This is color %d\r\n”, color);<br>　}<br>textcolor(128 + 15);<br>cprintf(“This is blinking\r\n”);<br>}<br>题目：求100之内的素数</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include &lt;stdio.h&gt;<br>#include “math.h”<br>#define N 101<br>main()<br>{<br>int i,j,line,a[N];<br>for(i=2;i&lt;N;i++) a=i;<br>for(i=2;i&lt;sqrt(N);i++)<br>　for(j=i+1;j&lt;N;j++)<br>　{<br>　　if(a!=0&amp;&amp;a[j]!=0)<br>　　if(a[j]%a==0)<br>　　a[j]=0;}<br>printf(“\n”);<br>for(i=2,line=0;i&lt;N;i++)<br>{<br>　if(a!=0)<br>　{printf(“%5d”,a);<br>　line++;}<br>　if(line==10)<br>　{printf(“\n”);<br>line=0;}<br>}<br>}<br>题目：对10个数进行排序</p>
+<hr>
+<p>程序分析：可以利用选择法，即从后9个比较过程中，选择一个最小的与第一个</p>
+<p>元素交换，下次类推，即用第二个元素与后8个进行比较，并进行交换。 　　　</p>
+<p>程序源代码：</p>
+<p>#define N 10<br>main()<br>{int i,j,min,tem,a[N];<br>/<em>input data</em>/<br>printf(“please input ten num:\n”);<br>for(i=0;i&lt;N;i++)<br>{<br>printf(“a[%d]=”,i);<br>scanf(“%d”,&amp;a);}<br>printf(“\n”);<br>for(i=0;i&lt;N;i++)<br>printf(“%5d”,a);<br>printf(“\n”);<br>/<em>sort ten num</em>/<br>for(i=0;i&lt;N-1;i++)<br>{min=i;<br>for(j=i+1;j&lt;N;j++)<br>if(a[min]&gt;a[j]) min=j;<br>tem=a;<br>a=a[min];<br>a[min]=tem;<br>}<br>/<em>output data</em>/<br>printf(“After sorted \n”);<br>for(i=0;i&lt;N;i++)<br>printf(“%5d”,a);<br>}<br>题目：求一个3*3矩阵对角线元素之和</p>
+<hr>
+<p>程序分析：利用双重for循环控制输入二维数组，再将a累加后输出。</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>float a[3][3],sum=0;<br>int i,j;<br>printf(“please input rectangle element:\n”);<br>for(i=0;i&lt;3;i++)<br>　for(j=0;j&lt;3;j++)<br>　scanf(“%f”,&amp;a[j]);<br>for(i=0;i&lt;3;i++)<br>　sum=sum+a;<br>printf(“duijiaoxian he is %6.2f”,sum);<br>}<br>题目：有一个已经排好序的数组。现输入一个数，要求按原来的规律将它插入数</p>
+<p>组中。</p>
+<hr>
+<p>程序分析：首先判断此数是否大于最后一个数，然后再考虑插入中间的数的情况</p>
+<p>，插入后此元素之后的数，依次后移一个位置。</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>int a[11]={1,4,6,9,13,16,19,28,40,100};<br>int temp1,temp2,number,end,i,j;<br>printf(“original array is:\n”);<br>for(i=0;i&lt;10;i++)<br>　printf(“%5d”,a);<br>printf(“\n”);<br>printf(“insert a new number:”);<br>scanf(“%d”,&amp;number);<br>end=a[9];<br>if(number&gt;end)<br>　a[10]=number;<br>else<br>　{for(i=0;i&lt;10;i++)<br>　　{ if(a&gt;number)<br>　　　{temp1=a;<br>　　　　a=number;<br>　　　for(j=i+1;j&lt;11;j++)<br>　　　{temp2=a[j];<br>　　　　a[j]=temp1;<br>　　　　temp1=temp2;<br>　　　}<br>　　　break;<br>　　　}<br>　　}<br>}<br>for(i=0;i&lt;11;i++)<br>　printf(“%6d”,a);<br>}<br>题目：将一个数组逆序输出。</p>
+<hr>
+<p>程序分析：用第一个与最后一个交换。</p>
+<hr>
+<p>程序源代码：</p>
+<p>#define N 5<br>main()<br>{ int a[N]={9,6,5,4,1},i,temp;<br>　printf(“\n original array:\n”);<br>　for(i=0;i&lt;N;i++)<br>　printf(“%4d”,a);<br>　for(i=0;i&lt;N/2;i++)<br>　{temp=a;<br>　　a=a[N-i-1];<br>　　a[N-i-1]=temp;<br>　}<br>printf(“\n sorted array:\n”);<br>for(i=0;i&lt;N;i++)<br>　printf(“%4d”,a);<br>} </p>
+<p>题目：学习static定义静态变量的用法</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>varfunc()<br>{<br>int var=0;<br>static int static_var=0;<br>printf(“\40:var equal %d \n”,var);<br>printf(“\40:static var equal %d \n”,static_var);<br>printf(“\n”);<br>var++;<br>static_var++;<br>}<br>void main()<br>{int i;<br>　for(i=0;i&lt;3;i++)<br>　　varfunc();<br>} </p>
+<p>题目：学习使用auto定义变量的用法</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>main()<br>{int i,num;<br>num=2;<br>　for (i=0;i&lt;3;i++)<br>　{ printf(“\40: The num equal %d \n”,num);<br>　　num++;<br>　　{<br>　　auto int num=1;<br>　　printf(“\40: The internal block num equal %d \n”,num);<br>　　num++;<br>　　}<br>　}<br>}<br>C语言的学基础，100个经典的算法－２<br>程序源代码：</p>
+<p>#include “stdio.h”<br>main()<br>{<br>int i,num;<br>num=2;<br>for(i=0;i&lt;3;i++)<br>{<br>printf(“\40: The num equal %d \n”,num);<br>num++;<br>{<br>static int num=1;<br>printf(“\40:The internal block num equal %d\n”,num);<br>num++;<br>}<br>}<br>} </p>
+<p>题目：学习使用external的用法。</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>int a,b,c;<br>void add()<br>{ int a;<br>a=3;<br>c=a+b;<br>}<br>void main()<br>{ a=b=4;<br>add();<br>printf(“The value of c is equal to %d\n”,c);<br>} </p>
+<p>题目：学习使用register定义变量的方法。</p>
+<hr>
+<p>程序源代码：</p>
+<p>void main()<br>{<br>register int i;<br>int tmp=0;<br>for(i=1;i&lt;=100;i++)<br>tmp+=i;<br>printf(“The sum is %d\n”,tmp);<br>} </p>
+<p>题目：宏#define命令练习(1)</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>#define TRUE 1<br>#define FALSE 0<br>#define SQ(x) (x)*(x)<br>void main()<br>{<br>int num;<br>int again=1;<br>printf(“\40: Program will stop if input value less than 50.\n”);<br>while(again)<br>{<br>printf(“\40lease input number==&gt;”);<br>scanf(“%d”,&amp;num);<br>printf(“\40:The square for this number is %d \n”,SQ(num));<br>if(num&gt;=50)<br>　again=TRUE;<br>else<br>　again=FALSE;<br>}<br>} </p>
+<p>题目：宏#define命令练习(2)</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>#define exchange(a,b)<br>{ \ /<em>宏定义中允许包含两道衣裳命令的情形，此时必须在最右边加上”&quot;</em>/<br>　int t;<br>　t=a;<br>　a=b;<br>　b=t;<br>}<br>void main(void)<br>{<br>int x=10;<br>int y=20;<br>printf(“x=%d; y=%d\n”,x,y);<br>exchange(x,y);<br>printf(“x=%d; y=%d\n”,x,y);<br>} </p>
+<p>题目：宏#define命令练习(3)</p>
+<hr>
+<p>程序源代码：</p>
+<p>#define LAG &gt;<br>#define SMA &lt;<br>#define EQ ==<br>#include “stdio.h”<br>void main()<br>{ int i=10;<br>int j=20;<br>if(i LAG j)<br>printf(“\40: %d larger than %d \n”,i,j);<br>else if(i EQ j)<br>printf(“\40: %d equal to %d \n”,i,j);<br>else if(i SMA j)<br>printf(“\40:%d smaller than %d \n”,i,j);<br>else<br>printf(“\40: No such value.\n”);<br>} </p>
+<p>题目：#if #ifdef和#ifndef的综合应用。</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>#define MAX<br>#define MAXIMUM(x,y) (x&gt;y)?x:y<br>#define MINIMUM(x,y) (x&gt;y)?y:x<br>void main()<br>{ int a=10,b=20;<br>#ifdef MAX<br>printf(“\40: The larger one is %d\n”,MAXIMUM(a,b));<br>#else<br>printf(“\40: The lower one is %d\n”,MINIMUM(a,b));<br>#endif<br>#ifndef MIN<br>printf(“\40: The lower one is %d\n”,MINIMUM(a,b));<br>#else<br>printf(“\40: The larger one is %d\n”,MAXIMUM(a,b));<br>#endif<br>#undef MAX<br>#ifdef MAX<br>printf(“\40: The larger one is %d\n”,MAXIMUM(a,b));<br>#else<br>printf(“\40: The lower one is %d\n”,MINIMUM(a,b));<br>#endif<br>#define MIN<br>#ifndef MIN<br>printf(“\40: The lower one is %d\n”,MINIMUM(a,b));<br>#else<br>printf(“\40: The larger one is %d\n”,MAXIMUM(a,b));<br>#endif<br>} </p>
+<p>题目：#include 的应用练习</p>
+<hr>
+<p>程序源代码：</p>
+<p>test.h 文件如下：<br>#define LAG &gt;<br>#define SMA &lt;<br>#define EQ ==<br>#include “test.h” /<em>一个新文件50.c，包含test.h</em>/<br>#include “stdio.h”<br>void main()<br>{ int i=10;<br>int j=20;<br>if(i LAG j)<br>printf(“\40: %d larger than %d \n”,i,j);<br>else if(i EQ j)<br>printf(“\40: %d equal to %d \n”,i,j);<br>else if(i SMA j)<br>printf(“\40:%d smaller than %d \n”,i,j);<br>else<br>printf(“\40: No such value.\n”);<br>}<br>题目：学习使用按位与 &amp; 。　　　</p>
+<hr>
+<p>程序分析：0&amp;0=0; 0&amp;1=0; 1&amp;0=0; 1&amp;1=1</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>main()<br>{<br>int a,b;<br>a=077;<br>b=a&3;<br>printf(“\40: The a &amp; b(decimal) is %d \n”,b);<br>b&amp;=7;<br>printf(“\40: The a &amp; b(decimal) is %d \n”,b);<br>} </p>
+<p>题目：学习使用按位或 | 。</p>
+<hr>
+<p>程序分析：0|0=0; 0|1=1; 1|0=1; 1|1=1　　　　　　　　　　　　</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>main()<br>{<br>int a,b;<br>a=077;<br>b=a|3;<br>printf(“\40: The a &amp; b(decimal) is %d \n”,b);<br>b|=7;<br>printf(“\40: The a &amp; b(decimal) is %d \n”,b);<br>}</p>
+<p>题目：学习使用按位异或 ^ 。　　　</p>
+<hr>
+<p>程序分析：0^0=0; 0^1=1; 1^0=1; 1^1=0</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>main()<br>{<br>int a,b;<br>a=077;<br>b=a^3;<br>printf(“\40: The a &amp; b(decimal) is %d \n”,b);<br>b^=7;<br>printf(“\40: The a &amp; b(decimal) is %d \n”,b);<br>} </p>
+<p>题目：取一个整数a从右端开始的4～7位。</p>
+<hr>
+<p>　　程序分析：可以这样考虑：<br>(1)先使a右移4位。<br>(2)设置一个低4位全为1,其余全为0的数。可用<del>(</del>0&lt;&lt;4)<br>(3)将上面二者进行&amp;运算。</p>
+<hr>
+<p>程序源代码：</p>
+<p>main()<br>{<br>unsigned a,b,c,d;<br>scanf(“%o”,&amp;a);<br>b=a&gt;&gt;4;<br>c=<del>(</del>0&lt;&lt;4);<br>d=b&c;<br>printf(“%o\n%o\n”,a,d);<br>} </p>
+<p>题目：学习使用按位取反~。　　　</p>
+<hr>
+<p>程序分析：~0=1; ~1=0;</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “stdio.h”<br>main()<br>{<br>int a,b;<br>a=234;<br>b=<del>a;<br>printf(“\40: The a’s 1 complement(decimal) is %d \n”,b);<br>a=</del>a;<br>printf(“\40: The a’s 1 complement(hexidecimal) is %x \n”,a);<br>} </p>
+<p>题目：画图，学用circle画圆形。</p>
+<hr>
+<p>程序源代码：</p>
+<p>/<em>circle</em>/<br>#include “graphics.h”<br>main()<br>{<br>int driver,mode,i;<br>float j=1,k=1;<br>driver=VGA;mode=VGAHI;<br>initgraph(&amp;driver,&amp;mode,””);<br>setbkcolor(YELLOW);<br>for(i=0;i&lt;=25;i++)<br>　　{<br>　　 setcolor(8);<br>　　 circle(310,250,k);<br>　　 k=k+j;<br>　　 j=j+0.3;<br>　　}<br>} </p>
+<p>题目：画图，学用line画直线。</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “graphics.h”<br>main()<br>{<br>int driver,mode,i;<br>float x0,y0,y1,x1;<br>float j=12,k;<br>driver=VGA;mode=VGAHI;<br>initgraph(&amp;driver,&amp;mode,””);<br>setbkcolor(GREEN);<br>x0=263;y0=263;y1=275;x1=275;<br>for(i=0;i&lt;=18;i++)<br>　　{<br>　　 setcolor(5);<br>　　 line(x0,y0,x0,y1);<br>　　 x0=x0-5;<br>　　 y0=y0-5;<br>　　 x1=x1+5;<br>　　 y1=y1+5;<br>　　 j=j+10;<br>　　}<br>x0=263;y1=275;y0=263;<br>for(i=0;i&lt;=20;i++)<br>　　{<br>　　 setcolor(5);<br>　　 line(x0,y0,x0,y1);<br>　　 x0=x0+5;<br>　　 y0=y0+5;<br>　　 y1=y1-5;<br>　　}<br>} </p>
+<p>题目：画图，学用rectangle画方形。　　　</p>
+<hr>
+<p>程序分析：利用for循环控制100-999个数，每个数分解出个位，十位，百位。</p>
+<hr>
+<p>程序源代码：</p>
+<p>#include “graphics.h”<br>main()<br>{<br>int x0,y0,y1,x1,driver,mode,i;<br>driver=VGA;mode=VGAHI;<br>initgraph(&amp;driver,&amp;mode,””);<br>setbkcolor(YELLOW);<br>x0=263;y0=263;y1=275;x1=275;<br>for(i=0;i&lt;=18;i++)<br>　　{<br>　　 setcolor(1);<br>　　 rectangle(x0,y0,x1,y1);<br>　　 x0=x0-5;<br>　　 y0=y0-5;<br>　　 x1=x1+5;<br>　　 y1=y1+5;<br>　　}<br>settextstyle(DEFAULT_FONT,HORIZ_DIR,2);<br>outtextxy(150,40,”How beautiful it is!”);<br>line(130,60,480,60);<br>setcolor(2);<br>circle(269,269,137);<br>} </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag"><i class="fa fa-tag"></i> C语言</a>
+          
+            <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+          
+            <a href="/tags/%E7%9F%A5%E4%B9%8E/" rel="tag"><i class="fa fa-tag"></i> 知乎</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/05/Usage/" rel="next" title="Markdown基本语法">
+                <i class="fa fa-chevron-left"></i> Markdown基本语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.png"
+                alt="Isaac-cie" />
+            
+              <p class="site-author-name" itemprop="name">Isaac-cie</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Isaac-cie</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

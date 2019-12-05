@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="blog," />
+  <meta name="keywords" content="Markdown的使用," />
 
 
 
@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="我的第二篇博客, 写几个建博客期间碰到的问题~">
-<meta name="keywords" content="blog">
+<meta name="description" content="一、标题在想要设置为标题的文字前面加#来表示一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。PS：注意#后有空格。  二、字体 加粗要加粗的文字左右分别用两个*包起来 斜体要倾斜的文字左右分别用一个*包起来 斜体加粗要倾斜和加粗的文字左右分别用三个*包起来 删除线要加删除线的文字左右分别用两个~~包起来   三、引用在引用的文字前加&amp;gt;即可。引用也可以嵌套，如加两个&amp;gt;&amp;gt;">
+<meta name="keywords" content="Markdown的使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客主题配置中遇到的问题">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;02&#x2F;my-second-blog&#x2F;index.html">
+<meta property="og:title" content="Markdown基本语法">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;05&#x2F;Usage&#x2F;index.html">
 <meta property="og:site_name" content="等天晴的博客">
-<meta property="og:description" content="我的第二篇博客, 写几个建博客期间碰到的问题~">
+<meta property="og:description" content="一、标题在想要设置为标题的文字前面加#来表示一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。PS：注意#后有空格。  二、字体 加粗要加粗的文字左右分别用两个*包起来 斜体要倾斜的文字左右分别用一个*包起来 斜体加粗要倾斜和加粗的文字左右分别用三个*包起来 删除线要加删除线的文字左右分别用两个~~包起来   三、引用在引用的文字前加&amp;gt;即可。引用也可以嵌套，如加两个&amp;gt;&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-05T09:47:31.105Z">
+<meta property="og:updated_time" content="2019-12-05T09:36:14.682Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/12/02/my-second-blog/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/12/05/Usage/"/>
 
 
 
 
 
-  <title>博客主题配置中遇到的问题 | 等天晴的博客</title>
+  <title>Markdown基本语法 | 等天晴的博客</title>
   
 
 
@@ -241,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/02/my-second-blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/05/Usage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Isaac-cie">
@@ -258,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">博客主题配置中遇到的问题</h1>
+          <h1 class="post-title" itemprop="name headline">Markdown基本语法</h1>
         
 
         <div class="post-meta">
@@ -271,8 +271,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-02T17:39:11+08:00">
-                2019-12-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-05T17:01:14+08:00">
+                2019-12-05
               </time>
             
 
@@ -281,28 +281,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index">
-                    <span itemprop="name">博客</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -336,20 +314,35 @@
       
 
       
-        <p>我的第二篇博客, 写几个建博客期间碰到的问题~</p>
-<a id="more"></a>
-
-<p>1.在初始化之后, 文章内容都还可以显示，但在美化博客后，再上传文章界面上就只剩hello world了…<br>期间还重新init了几次，后来才发现是_config.yml文件里把time zone的内容改了导致识别不了。<br>原为：<br>time zone: ‘’<br>改成了：<br>time zone: ‘CN’<br>改回原样后问题解决.<br>下次不能再乱改了，浪费了太多时间…</p>
-<p>2.用7.6版next主题不能显示侧边栏，重装了几次，最后换成了5.1版的才成功</p>
-<p>3.menu分类处原来的文件在/   /后有一个空格再加||，跟教程不匹配<br>如：categories: /categories/ || th</p>
-<p>4.加载过于慢，网上说是字体的问题，但用本地字体未解决，原因未知…</p>
-<p>5.加入背景图片后一些文字不能正常显示，重新配置后发现..</p>
-<p>6.加载过慢，在网上找到了解决方案。<br>把在NexT主题的_config.yml里面的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># Uri of fonts host. E.g. //fonts.googleapis.com (Default)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">host:</span></pre></td></tr></table></figure>
-<p>改为：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># Uri of fonts host. E.g. //fonts.googleapis.com (Default)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># fonts.lug.ustc.edu.cn是中科大的源</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">host: //fonts.lug.ustc.edu.cn</span></pre></td></tr></table></figure>
-<p>(转自<a href="https://anson2416.github.io/posts/ae382d5a/" target="_blank" rel="noopener">https://anson2416.github.io/posts/ae382d5a/</a>)</p>
-<p>……</p>
+        <h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。<br>PS：注意#后有空格。</p>
+<hr>
+<h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><ul>
+<li><strong>加粗</strong><br>要加粗的文字左右分别用两个*包起来</li>
+<li><strong>斜体</strong><br>要倾斜的文字左右分别用一个*包起来</li>
+<li><strong>斜体加粗</strong><br>要倾斜和加粗的文字左右分别用三个*包起来</li>
+<li><strong>删除线</strong><br>要加删除线的文字左右分别用两个~~包起来</li>
+</ul>
+<hr>
+<h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;<br>n个…</p>
+<hr>
+<h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><p>三个或者三个以上的 - 或者 * 都可以。</p>
+<hr>
+<h1 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h1><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span></pre></td></tr></table></figure>
+<hr>
+<h1 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h1><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">[超链接名](超链接地址 &quot;超链接title&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">title可加可不加</span></pre></td></tr></table></figure>
+<hr>
+<h1 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h1><ul>
+<li><strong>无序列表</strong><br>语法：<br>无序列表用 - + * 任何一种都可以</li>
+<li><strong>有序列表</strong><br>语法：<br>数字加点</li>
+<li><strong>列表嵌套</strong><br>上一级和下一级之间敲三个空格即可</li>
+</ul>
+<hr>
+<h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h1><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">---|:--:|---:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">内容|内容|内容</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">内容|内容|内容</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">第二行分割表头和内容。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">- 有一个就行，为了对齐，多加了几个</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">文字默认居左</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">-两边加：表示文字居中</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">-右边加：表示文字居右</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">注：原生的语法两边都要用 | 包起来。此处省略</span></pre></td></tr></table></figure>
+<hr>
+<h1 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h1><p>语法：<br>单行代码：代码之间分别用一个反引号包起来<br>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
 
       
     </div>
@@ -367,7 +360,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/blog/" rel="tag"><i class="fa fa-tag"></i> blog</a>
+            <a href="/tags/Markdown%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="tag"><i class="fa fa-tag"></i> Markdown的使用</a>
           
         </div>
       
@@ -380,8 +373,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/01/my-first-blog/" rel="next" title="我的第一篇博客">
-                <i class="fa fa-chevron-left"></i> 我的第一篇博客
+              <a href="/2019/12/05/Gallery/" rel="next" title="Gallery">
+                <i class="fa fa-chevron-left"></i> Gallery
               </a>
             
           </div>
@@ -390,8 +383,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/12/02/Down-by-the-sally-gardens/" rel="prev" title="Down by the sally gardens(柳园里)">
-                Down by the sally gardens(柳园里) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/05/c/" rel="prev" title="C语言经典算法程序">
+                C语言经典算法程序 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -444,8 +437,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -509,6 +511,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、标题"><span class="nav-number">1.</span> <span class="nav-text">一、标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、字体"><span class="nav-number">2.</span> <span class="nav-text">二、字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、引用"><span class="nav-number">3.</span> <span class="nav-text">三、引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、分割线"><span class="nav-number">4.</span> <span class="nav-text">四、分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、图片"><span class="nav-number">5.</span> <span class="nav-text">五、图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、超链接"><span class="nav-number">6.</span> <span class="nav-text">六、超链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、列表"><span class="nav-number">7.</span> <span class="nav-text">七、列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八、表格"><span class="nav-number">8.</span> <span class="nav-text">八、表格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九、代码"><span class="nav-number">9.</span> <span class="nav-text">九、代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
